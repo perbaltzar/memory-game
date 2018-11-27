@@ -24,3 +24,4 @@ let previousTarget = 0;
 let pairs = 0;
 const gameBoard = document.querySelector('.game-board');
 const restart = document.querySelector('.restart')
+let clicks = 0;

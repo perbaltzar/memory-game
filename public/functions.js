@@ -3,11 +3,11 @@ const resetGame = () =>{
 	pairs = 0;
 	firstCard = 0;
 	secondCard = 0;
+	clicks = 0;
 	wait = false;
 	shuffle(cards);
 	clearBoard();
 	placeCard(cards);
-	startGame();
 }
 //CLEAR BOARD
 const clearBoard = () => {
@@ -26,12 +26,21 @@ function shuffle(array) {
 		[array[i], array[j]] = [array[j], array[i]];
 	}
 }
+//RESETING THE CLICKS
+const resetClick = () =>{
+let cardsDone = document.querySelectorAll('.chosen');
+	Array.from(cardsDone).forEach((cardDone) => {
+		turnBackCard(cardDone);
+		clicks = 0;
+	});
+}
 //TURNING THE CARDS BACK
 const turnBackCard = (card) =>{
+	previousTarget = 0;
 	firstCard = 0;
 	secondCard = 0;
 	card.classList.remove('chosen');
-	card.classList.remove(`card${cardId}`);
+	card.classList.remove(`card${card.dataset.cardid}`);
 	card.classList.add('unplayed');
 }
 //MAKING THE CARDS
@@ -49,10 +58,15 @@ const startGame = () =>{
 	const boardCards = document.querySelectorAll('.unplayed');
 	Array.from(boardCards).forEach((boardCard) => {
 		boardCard.addEventListener('click', function selectCard() {
-			if (previousTarget === boardCard || boardCard.classList.contains('done')){
+			if (clicks === 2){
+				window.addEventListener('click', resetClick());
+				window.removeEventListener('click', resetClick(), true);
+			}
+			else if (previousTarget === boardCard || boardCard.classList.contains('done')){
 				previousTarget = boardCard;
-			}else if (!wait){
-				//chooseCard(boardCard)
+			}
+			else{
+				clicks++;
 				let cardId = boardCard.dataset.cardid;
 				boardCard.classList.remove('unplayed');
 				boardCard.classList.add('chosen');
@@ -67,6 +81,7 @@ const startGame = () =>{
 						Array.from(cardsDone).forEach((cardDone) => {
 							cardDone.classList.add('done');
 							cardDone.classList.remove('chosen');
+							clicks = 0;
 						});
 						pairs++;
 						firstCard = 0;
@@ -76,24 +91,12 @@ const startGame = () =>{
 							console.log('WINNER!!!');
 						}
 					}else{
-						wait = true;
-						let cardsDone = document.querySelectorAll('.chosen');
-						Array.from(cardsDone).forEach((cardDone) => {
-							//TURNING THE CARDS BACK
-							setTimeout(function(){
-								cardId = cardDone.dataset.cardid
-								previousTarget = 0;
-								firstCard = 0;
-								secondCard = 0;
-								cardDone.classList.remove('chosen');
-								cardDone.classList.remove(`card${cardId}`);
-								cardDone.classList.add('unplayed');
-								wait = false;
-							}, delay);
-						});
+
+
 					}
 				}
 				previousTarget = boardCard;
+				console.log(clicks);
 			}
 		});
 	});

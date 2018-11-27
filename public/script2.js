@@ -1,11 +1,6 @@
 //Restart GAME
 restart.addEventListener('click', () =>{
-	pairs = 0;
-	firstCard = 0;
-	secondCard = 0;
-	wait = false;
-	shuffle(cards);
-	placeCard(cards);
+	resetGame();
 	startGame();
 });
 
