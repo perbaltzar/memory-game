@@ -24,7 +24,8 @@ body{
 	border-radius: 5px;
 	transition: all 0.1s linear;
 	display: inline-block;
-
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .unplayed:hover{
 	transform: scale(1.05);
@@ -35,25 +36,34 @@ body{
 
 .card1{
 	background-color: blue;
+	background-image: url(images/apple.png);
+
 }
 .card2{
 	background-color: green;
+	background-image: url(images/banana.png);
 }
 .card3{
 	background-color: red;
+	background-image: url(images/carrot.png);
 }
 .card4{
 	background-color: hotpink;
+	background-image: url(images/grapes.png);
 }
 .card5{
 	background-color: yellow;
+	background-image: url(images/kiwi.png);
 }
 .card6{
 	background-color: aqua;
+	background-image: url(images/orange.png);
 }
 .card7{
 	background-color: white;
+	background-image: url(images/strawberry.png);
 }
 .card8{
 	background-color: darkviolet;
+	background-image: url(images/apple.png);
 }
