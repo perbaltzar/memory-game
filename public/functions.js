@@ -28,7 +28,7 @@ function shuffle(array) {
 }
 //RESETING THE CLICKS
 const resetClick = () =>{
-let cardsDone = document.querySelectorAll('.chosen');
+	let cardsDone = document.querySelectorAll('.chosen');
 	Array.from(cardsDone).forEach((cardDone) => {
 		turnBackCard(cardDone);
 		clicks = 0;
@@ -42,6 +42,7 @@ const turnBackCard = (card) =>{
 	card.classList.remove('chosen');
 	card.classList.remove(`card${card.dataset.cardid}`);
 	card.classList.add('unplayed');
+	card.classList.add('animation');
 }
 //MAKING THE CARDS
 const makeCard = (id, className, image) => {
@@ -62,7 +63,7 @@ const startGame = () =>{
 				window.addEventListener('click', resetClick());
 				window.removeEventListener('click', resetClick(), true);
 			}
-			else if (previousTarget === boardCard || boardCard.classList.contains('done')){
+			if (previousTarget === boardCard || boardCard.classList.contains('done')){
 				previousTarget = boardCard;
 			}
 			else{
@@ -73,17 +74,21 @@ const startGame = () =>{
 				boardCard.classList.add(`card${cardId}`);
 				if (firstCard === 0){
 					firstCard = cardId;
+					boardCard.classList.remove('animation');
+					console.log(`first: ${firstCard}`);
 				}
 				else{
 					secondCard = cardId;
+					console.log(`sec: ${secondCard}`);
 					if (checkIfPair(firstCard, secondCard)){
 						let cardsDone = document.querySelectorAll('.chosen');
 						Array.from(cardsDone).forEach((cardDone) => {
 							cardDone.classList.add('done');
+							cardDone.classList.remove('animation')
 							cardDone.classList.remove('chosen');
 							clicks = 0;
 						});
-						pairs++;
+
 						firstCard = 0;
 						secondCard = 0;
 						//WINNING THE GAME
@@ -91,12 +96,14 @@ const startGame = () =>{
 							console.log('WINNER!!!');
 						}
 					}else{
-
-
+						let cardsDone = document.querySelectorAll('.chosen');
+						Array.from(cardsDone).forEach((cardDone) => {
+							cardDone.classList.add('animation')
+						});
 					}
 				}
 				previousTarget = boardCard;
-				console.log(clicks);
+				console.log(`clicks: ${clicks}`);
 			}
 		});
 	});

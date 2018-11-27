@@ -25,7 +25,7 @@ body{
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.unplayed:hover{
+.animation:hover{
 	transform: scale(1.05);
 	transition: all 0.1s linear;
 	cursor: pointer;

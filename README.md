@@ -12,6 +12,6 @@ Made in Javascript, CSS and HTML
 4. Play!
 
 ## Testers
-[Hanna Ell](https://github.com/hannaell)
-[Adrian Jungnelius](https://github.com/AdrianJung)
-[Erik Arvidsson](https://github.com/erikarvidsson)
+* [Hanna Ell](https://github.com/hannaell)
+* [Adrian Jungnelius](https://github.com/AdrianJung)
+* [Erik Arvidsson](https://github.com/erikarvidsson)
