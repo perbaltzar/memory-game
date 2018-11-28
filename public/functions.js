@@ -75,11 +75,11 @@ const startGame = () =>{
 				if (firstCard === 0){
 					firstCard = cardId;
 					boardCard.classList.remove('animation');
-					console.log(`first: ${firstCard}`);
+					// console.log(	`first: ${firstCard}`);
 				}
 				else{
 					secondCard = cardId;
-					console.log(`sec: ${secondCard}`);
+					// console.log(`sec: ${secondCard}`);
 					if (checkIfPair(firstCard, secondCard)){
 						let cardsDone = document.querySelectorAll('.chosen');
 						Array.from(cardsDone).forEach((cardDone) => {
@@ -103,8 +103,55 @@ const startGame = () =>{
 					}
 				}
 				previousTarget = boardCard;
-				console.log(`clicks: ${clicks}`);
+				// console.log(`clicks: ${clicks}`);
 			}
 		});
 	});
 }
+//KONAMICODE
+document.addEventListener('keydown', (event) =>{
+	code.push(event.keyCode);
+	if (code[0] === 38){
+		console.log('hej');
+		if (code[1] === 38){
+			if (code[2] === 40){
+				if (code[3] === 40){
+					if (code[4] === 37){
+						if (code[5] === 39){
+							if (code[6] === 37){
+								if (code[7] === 39){
+									if (code[8] === 66){
+										if (code[9] === 65){
+											console.log('You Win!');
+										}else if (code.length > 9){
+											code = [];
+										}
+									}else if (code.length > 8){
+										code = [];
+									}
+								}else if (code.length > 7){
+									code = [];
+								}
+							}else if (code.length > 6){
+								code = [];
+							}
+						}else if (code.length > 5){
+							code = [];
+						}
+					}else if (code.length > 4){
+						code = [];
+					}
+				}else if (code.length > 3){
+					code = [];
+				}
+			}else if (code.length > 2){
+				code = [];
+			}
+		}else if (code.length > 1){
+			code = [];
+		}
+	}else{
+		code = [];
+	}
+	console.log(code);
+});
