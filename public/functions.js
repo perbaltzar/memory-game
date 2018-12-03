@@ -13,9 +13,13 @@ const resetGame = () =>{
 	endScreen.classList.remove('winner');
 	endScreen.classList.remove('rick-rolled');
 	endScreen.classList.remove('success');
+	music.play();
+	winMusic.currentTime = 0;
+	winMusic.pause();
 }
 //LOSE GAME
 const loseGame = () => {
+	music.stop();
 	endScreen.classList.add('winner');
 	endScreen.classList.add('rick-rolled');
 	playing = false;
@@ -24,6 +28,9 @@ const loseGame = () => {
 }
 //WIN GAME
 const winGame = () => {
+
+	music.pause();
+	winMusic.play();
 	endScreen.classList.add('winner');
 	endScreen.classList.add('success');
 	endScreen.classList.remove('rick-rolled');

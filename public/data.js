@@ -39,4 +39,6 @@ const endScreen = document.querySelector('.end-screen');
 let seconds = 0;
 let tenthSeconds =  0;
 //Music
+const introMusic = document.querySelector('.intro');
 const music = document.querySelector('.music');
+const winMusic = document.querySelector('.win-music');

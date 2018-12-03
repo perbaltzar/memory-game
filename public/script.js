@@ -14,10 +14,11 @@ startButton.addEventListener('click', () => {
 	startGame();
 	playing = true;
 	startScreen.classList.add('hide-start');
-	document.querySelector('audio').play();
+	music.play();
 });
 
 //Show Timer
 window.setInterval(stopWatch, 100);
 
 //Play music
+introMusic.play();
