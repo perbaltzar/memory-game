@@ -11,6 +11,14 @@ Made in Javascript, CSS and HTML
 3. You probably know the rules, but turn over the cards and match them.
 4. Play!
 
+##To Do
+* Graphics
+* Restart-card
+* Timer
+* Start Game Screen
+* Win Game Screen
+
+
 ## Testers
 * [Hanna Ell](https://github.com/hannaell)
 * [Adrian Jungnelius](https://github.com/AdrianJung)

@@ -112,7 +112,6 @@ const startGame = () =>{
 document.addEventListener('keydown', (event) =>{
 	code.push(event.keyCode);
 	if (code[0] === 38){
-		console.log('hej');
 		if (code[1] === 38){
 			if (code[2] === 40){
 				if (code[3] === 40){
@@ -123,6 +122,7 @@ document.addEventListener('keydown', (event) =>{
 									if (code[8] === 66){
 										if (code[9] === 65){
 											console.log('You Win!');
+											code = [];
 										}else if (code.length > 9){
 											code = [];
 										}
@@ -153,5 +153,4 @@ document.addEventListener('keydown', (event) =>{
 	}else{
 		code = [];
 	}
-	console.log(code);
 });
