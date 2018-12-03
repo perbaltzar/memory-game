@@ -13,8 +13,6 @@ Made in Javascript, CSS and HTML
 
 ## To Do
 * More Graphics
-* High Score
-
 
 ## Testers
 * [Hanna Ell](https://github.com/hannaell)
