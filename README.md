@@ -12,8 +12,7 @@ Made in Javascript, CSS and HTML
 4. Play!
 
 ## To Do
-* Graphics
-* Restart-card
+* More Graphics
 * High Score
 
 

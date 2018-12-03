@@ -38,3 +38,5 @@ const endScreen = document.querySelector('.end-screen');
 //TIMER
 let seconds = 0;
 let tenthSeconds =  0;
+//Music
+const music = document.querySelector('.music');

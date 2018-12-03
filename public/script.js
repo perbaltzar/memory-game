@@ -3,7 +3,6 @@ restart.addEventListener('click', () =>{
 	resetGame();
 	startGame();
 });
-
 playAgain.addEventListener('click', () =>{
 	resetGame();
 	startGame();
@@ -15,7 +14,10 @@ startButton.addEventListener('click', () => {
 	startGame();
 	playing = true;
 	startScreen.classList.add('hide-start');
+	document.querySelector('audio').play();
 });
 
 //Show Timer
-	window.setInterval(stopWatch, 100);
+window.setInterval(stopWatch, 100);
+
+//Play music
