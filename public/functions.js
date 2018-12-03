@@ -12,7 +12,12 @@ const resetGame = () =>{
 	playing = true;
 	endScreen.classList.remove('winner');
 }
-
+//LOSE GAME
+const loseGame = () => {
+	endScreen.classList.add('winner');
+	playing = false;
+	document.querySelector('.end-text').innerHTML = 	"YOU LOSE!!!"
+}
 //WIN GAME
 const winGame = () => {
 	endScreen.classList.add('winner');
@@ -36,6 +41,10 @@ const clearBoard = () => {
 //CHECKING IF THE CARDS MATCHES
 const checkIfPair = (first, second) => {
 	return first === second;
+}
+//CHECKING FOR THE RESET-CARD
+const checkIfReset = (card) => {
+	return card == 10;
 }
 
 //SHUFFLE THE CARDS
@@ -107,6 +116,10 @@ const startGame = () =>{
 							cardDone.classList.remove('chosen');
 							clicks = 0;
 						});
+						if (checkIfReset(firstCard)){
+							console.log('hej');
+							loseGame();
+						}
 						pairs++;
 						firstCard = 0;
 						secondCard = 0;

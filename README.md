@@ -14,9 +14,6 @@ Made in Javascript, CSS and HTML
 ## To Do
 * Graphics
 * Restart-card
-* Timer
-* Start Game Screen
-* Win Game Screen
 * High Score
 
 
