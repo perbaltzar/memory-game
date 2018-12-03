@@ -37,4 +37,4 @@ const startScreen = document.querySelector('.start');
 const endScreen = document.querySelector('.end-screen');
 //TIMER
 let seconds = 0;
-let minutes =  0;
+let tenthSeconds =  0;

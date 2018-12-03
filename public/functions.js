@@ -22,14 +22,18 @@ const loseGame = () => {
 const winGame = () => {
 	endScreen.classList.add('winner');
 	playing = false;
-	document.querySelector('.end-text').innerHTML = 	"YOU WIN!!!" + "<br>" + "YOUR TIME: " + seconds;
+	document.querySelector('.end-text').innerHTML = 	"YOU WIN!!!" + "<br>" + "YOUR TIME: " + seconds + "." + tenthSeconds
 
 }
 //TIMER
 const stopWatch = () => {
 	if (playing){
-		seconds++;
-		document.querySelector('.timer').innerHTML = 	seconds;
+		tenthSeconds++
+		if (tenthSeconds/10 === 1){
+			seconds++;
+			tenthSeconds = 0;
+		}
+		document.querySelector('.timer').innerHTML = 	seconds+"."+tenthSeconds;
 	}
 };
 
@@ -117,7 +121,6 @@ const startGame = () =>{
 							clicks = 0;
 						});
 						if (checkIfReset(firstCard)){
-							console.log('hej');
 							loseGame();
 						}
 						pairs++;

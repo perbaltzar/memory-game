@@ -18,4 +18,4 @@ startButton.addEventListener('click', () => {
 });
 
 //Show Timer
-	window.setInterval(stopWatch, 1000);
+	window.setInterval(stopWatch, 100);
