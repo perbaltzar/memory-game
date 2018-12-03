@@ -10,13 +10,15 @@ const resetGame = () =>{
 	placeCard(cards);
 	seconds = 0;
 	playing = true;
+	endScreen.classList.remove('winner');
 }
 
 //WIN GAME
 const winGame = () => {
 	endScreen.classList.add('winner');
 	playing = false;
-	endScreen.innerHTML = 	"YOU WIN!!!" + "<br>" + "YOUR TIME: " + seconds;
+	document.querySelector('.end-text').innerHTML = 	"YOU WIN!!!" + "<br>" + "YOUR TIME: " + seconds;
+
 }
 //TIMER
 const stopWatch = () => {
@@ -25,8 +27,6 @@ const stopWatch = () => {
 		document.querySelector('.timer').innerHTML = 	seconds;
 	}
 };
-
-
 
 //CLEAR BOARD
 const clearBoard = () => {

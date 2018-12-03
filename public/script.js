@@ -4,6 +4,10 @@ restart.addEventListener('click', () =>{
 	startGame();
 });
 
+playAgain.addEventListener('click', () =>{
+	resetGame();
+	startGame();
+});
 //START GAME
 startButton.addEventListener('click', () => {
 	shuffle(cards);
