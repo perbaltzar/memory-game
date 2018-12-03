@@ -60,4 +60,4 @@ let highScoreDB = localStorage.getItem('highScoreDB');
 let newHighScore = JSON.parse(highScoreDB);
 let notSubmited = true;
 //BACK TO START
-const mainMenu = document.querySelector('.back-to-start');
+const mainMenus = document.querySelectorAll('.back-to-start');

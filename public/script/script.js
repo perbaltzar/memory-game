@@ -53,15 +53,17 @@ submit.addEventListener('click', ()=>{
 
 
 //GO BACK TO MAIN MENU
+Array.from(mainMenus).forEach((mainMenu)=>{
 	mainMenu.addEventListener('click', ()=>{
-	startScreen.classList.remove('hide-start');
-	music.pause();
-	loseMusic.pause();
-	winMusic.pause();
-	introMusic.play();
-	winMusic.currentTime = 0;
-	loseMusic.currentTime = 0;
-	endScreen.classList.remove('winner');
-	endScreen.classList.remove('rick-rolled');
-	endScreen.classList.remove('success');
+		startScreen.classList.remove('hide-start');
+		music.pause();
+		loseMusic.pause();
+		winMusic.pause();
+		introMusic.play();
+		winMusic.currentTime = 0;
+		loseMusic.currentTime = 0;
+		endScreen.classList.remove('winner');
+		endScreen.classList.remove('rick-rolled');
+		endScreen.classList.remove('success');
+})
 });
