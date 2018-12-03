@@ -1,3 +1,4 @@
+'use strict';
 //RESETING THE GAME
 const resetGame = () =>{
 	pairs = 0;
@@ -16,10 +17,15 @@ const resetGame = () =>{
 	music.play();
 	winMusic.currentTime = 0;
 	winMusic.pause();
+	loseMusic.currentTime = 0;
+	loseMusic.pause();
+	notSubmited = true;
 }
 //LOSE GAME
 const loseGame = () => {
-	music.stop();
+	inputContainer.classList.add('hidden');
+	music.pause();
+	loseMusic.play();
 	endScreen.classList.add('winner');
 	endScreen.classList.add('rick-rolled');
 	playing = false;
@@ -28,8 +34,9 @@ const loseGame = () => {
 }
 //WIN GAME
 const winGame = () => {
-
+	inputContainer.classList.remove('hidden');
 	music.pause();
+	loseMusic.pause();
 	winMusic.play();
 	endScreen.classList.add('winner');
 	endScreen.classList.add('success');
@@ -203,3 +210,11 @@ document.addEventListener('keydown', (event) =>{
 		code = [];
 	}
 });
+//PUSH NEW HIGHSCORE
+const getHighScore = () => {
+	highScore.innerHTML = '';
+	newHighScore.forEach((entry)=>{
+		highScore.innerHTML += `<div><p>${entry.name}</p><p>${entry.time}</p></div>	`;
+	});
+
+}

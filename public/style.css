@@ -5,6 +5,7 @@ body{
 	align-items: center;
 	flex-flow: column;
 	margin: 0;
+	background-color: #faba5c;
 }
 *{
 	font-family: 	Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -57,9 +58,13 @@ body{
 	text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 .start button{
-	width: 10vw;
-	height: 7vh;
+	width: 15vw;
+	height: 14vh;
 	font-size: 5vh;
+}
+button:hover{
+	cursor: pointer;
+	background-color: aquamarine;
 }
 .restart{
 	grid-row: 2;
@@ -104,11 +109,42 @@ body{
 .timer{
 
 }
-/* .chosen{
-	transform: rotateY(180deg);
-	transition: all .3s ease;
-} */
+/*HIGH SCORE*/
+.high-score-container{
+	position: absolute;
+	width: 50vw;
+	height: 80vh;
+	background-color: #faba5c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	transition: all .5s ease;
+}
+.high-score{
+	width: 40vw;
+	height: 70vh;
+	background-color: azure;
+}
+.high-score div {
+	display: flex;
+	justify-content:space-between;
+}
+.high-score div:nth-child(odd) {
+    background: #d7ffff;
+}
+.high-score div p{
+	margin: 2px;
+}
+.closed{
+	transform: translateY(-80vh);
+}
+.hidden{
+	display: none;
+}
 
+
+/*CARD DESIGN*/
 .card1{
 	background-image: url(images/wonka.jpg);
 	background-size:cover;

@@ -11,9 +11,15 @@
 
 	<div class="start">
 		<div class="start-top">ONE DOES NOT SIMPLE PLAY MEME-ORY</div>
-		<button class="start-game">
-			Start
-		</button>
+		<div class="buttons">
+
+			<button class="start-game">
+				Start
+			</button>
+			<button class="high-score-button" type="button" name="button">
+				High Score
+			</button>
+		</div>
 		<div class="start-bottom">WITHOUT FINDING BAD LUCK BRIAN LAST</div>
 	</div>
 	<div class="game-board">
@@ -29,13 +35,28 @@
 		<div class="end-text">
 
 		</div>
-		<button class="play-again">
-			PLAY AGAIN
-		</button>
+		<div class="input">
+			<input class="name" type="text">
+			<button class="submit-high-score">SUBMIT</button>
+		</div>
+		<div class="buttons">
+			<button class="play-again">
+				PLAY AGAIN
+			</button>
+			<button class="back-to-start">
+				MAIN MENU
+			</button>
+		</div>
 	</div>
-	<audio class="intro" src="music/intro.mp3" loop></audio>
+	<div class="high-score-container closed">
+		<h1>HIGH SCORE</h1>
+		<div class="high-score"></div>
+		<button class="close-high-score">CLOSE</button>
+	</div>
+	<audio class="intro" src="music/intro.mp3"></audio>
 	<audio class="music" src="music/game-loop.mp3" loop></audio>
 	<audio class="win-music" src="music/win-loop.mp3"></audio>
+	<audio class="lose-music" src="music/end.mp3"></audio>
 	<script src="data.js"></script>
 	<script src="functions.js"></script>
 	<script src="script.js">	</script>
