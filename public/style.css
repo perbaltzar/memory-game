@@ -13,7 +13,6 @@ body{
 .game-board{
 	width: 1000px;
 	height: 800px;
-	background-color: brown;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -23,7 +22,6 @@ body{
 .controllers{
 	height: 100px;
 	width: 1024px;
-	background-color: brown;
 	display: grid;
 	grid-template-rows: 12px 1fr 12px;
 	grid-template-columns: 12px 1fr 2fr 1fr 12px;
@@ -87,7 +85,16 @@ body{
 	width: 100vw;
 	height: 100vh;
 	text-align: center;
-
+}
+.rick-rolled{
+	background-image: url(images/rick-rolled.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.success{
+	background-image: url(images/success.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .winner{
 	display: grid;

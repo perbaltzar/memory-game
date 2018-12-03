@@ -11,16 +11,22 @@ const resetGame = () =>{
 	seconds = 0;
 	playing = true;
 	endScreen.classList.remove('winner');
+	endScreen.classList.remove('rick-rolled');
+	endScreen.classList.remove('success');
 }
 //LOSE GAME
 const loseGame = () => {
 	endScreen.classList.add('winner');
+	endScreen.classList.add('rick-rolled');
 	playing = false;
-	document.querySelector('.end-text').innerHTML = 	"YOU LOSE!!!"
+	document.querySelector('.end-text').innerHTML = 	"BAD LUCK!!!"
+
 }
 //WIN GAME
 const winGame = () => {
 	endScreen.classList.add('winner');
+	endScreen.classList.add('success');
+	endScreen.classList.remove('rick-rolled');
 	playing = false;
 	document.querySelector('.end-text').innerHTML = 	"YOU WIN!!!" + "<br>" + "YOUR TIME: " + seconds + "." + tenthSeconds
 
