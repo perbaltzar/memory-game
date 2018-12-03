@@ -8,7 +8,26 @@ const resetGame = () =>{
 	shuffle(cards);
 	clearBoard();
 	placeCard(cards);
+	seconds = 0;
+	playing = true;
 }
+
+//WIN GAME
+const winGame = () => {
+	endScreen.classList.add('winner');
+	playing = false;
+	endScreen.innerHTML = 	"YOU WIN!!!" + "<br>" + "YOUR TIME: " + seconds;
+}
+//TIMER
+const stopWatch = () => {
+	if (playing){
+		seconds++;
+		document.querySelector('.timer').innerHTML = 	seconds;
+	}
+};
+
+
+
 //CLEAR BOARD
 const clearBoard = () => {
 	gameBoard.innerHTML = '';
@@ -88,12 +107,13 @@ const startGame = () =>{
 							cardDone.classList.remove('chosen');
 							clicks = 0;
 						});
-
+						pairs++;
 						firstCard = 0;
 						secondCard = 0;
 						//WINNING THE GAME
-						if (pairs > 7){
-							console.log('WINNER!!!');
+						if (pairs > 9){
+							winGame();
+							playing = false;
 						}
 					}else{
 						let cardsDone = document.querySelectorAll('.chosen');
@@ -121,7 +141,7 @@ document.addEventListener('keydown', (event) =>{
 								if (code[7] === 39){
 									if (code[8] === 66){
 										if (code[9] === 65){
-											console.log('You Win!');
+											winGame();
 											code = [];
 										}else if (code.length > 9){
 											code = [];
