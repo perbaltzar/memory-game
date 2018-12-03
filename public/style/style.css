@@ -28,7 +28,7 @@ body{
 	grid-template-columns: 12px 1fr 2fr 1fr 12px;
 }
 .card{
-	background-image: url(images/penguin.jpg);
+	background-image: url(../images/penguin.jpg);
 	border-radius: 5px;
 	transition: all 0.1s linear;
 	display: inline-block;
@@ -49,7 +49,7 @@ body{
 	flex-flow: column;
 	justify-content: space-between;
 	align-items: center;
-	background-image: url('images/boromir.jpg');
+	background-image: url('../images/boromir.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -58,6 +58,7 @@ body{
 	text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 .start button{
+	margin-top: 60vh;
 	width: 15vw;
 	height: 14vh;
 	font-size: 5vh;
@@ -92,12 +93,12 @@ button:hover{
 	text-align: center;
 }
 .rick-rolled{
-	background-image: url(images/rick-rolled.gif);
+	background-image: url(../images/rick-rolled.gif);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .success{
-	background-image: url(images/success.gif);
+	background-image: url(../images/success.gif);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -146,52 +147,52 @@ button:hover{
 
 /*CARD DESIGN*/
 .card1{
-	background-image: url(images/wonka.jpg);
+	background-image: url(../images/wonka.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card2{
-	background-image: url(images/eyeing.jpg);
+	background-image: url(../images/eyeing.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card3{
-	background-image: url(images/girlfriend.jpg);
+	background-image: url(../images/girlfriend.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card4{
-	background-image: url(images/good-guy-greg.png);
+	background-image: url(../images/good-guy-greg.png);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card5{
-	background-image: url(images/grandma.jpg);
+	background-image: url(../images/grandma.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card6{
-	background-image: url(images/great.jpg);
+	background-image: url(../images/great.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card7{
-	background-image: url(images/roll-safe.jpg);
+	background-image: url(../images/roll-safe.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card8{
-	background-image: url(images/scumbag-steve.jpg);
+	background-image: url(../images/scumbag-steve.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card9{
-	background-image: url(images/success-kid.jpg);
+	background-image: url(../images/success-kid.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 .card10{
-	background-image: url(images/bad-luck-brian.jpg);
+	background-image: url(../images/bad-luck-brian.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
 }
