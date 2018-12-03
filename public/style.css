@@ -103,42 +103,52 @@ body{
 } */
 
 .card1{
-	background-color: blue;
-	background-image: url(images/apple.png);
+	background-image: url(images/wonka.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card2{
-	background-color: green;
-	background-image: url(images/banana.png);
+	background-image: url(images/eyeing.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card3{
-	background-color: red;
-	background-image: url(images/carrot.png);
+	background-image: url(images/girlfriend.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card4{
-	background-color: hotpink;
-	background-image: url(images/grapes.png);
+	background-image: url(images/good-guy-greg.png);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card5{
-	background-color: yellow;
-	background-image: url(images/kiwi.png);
+	background-image: url(images/grandma.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card6{
-	background-color: aqua;
-	background-image: url(images/orange.png);
+	background-image: url(images/great.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card7{
-	background-color: white;
-	background-image: url(images/strawberry.png);
+	background-image: url(images/roll-safe.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card8{
-	background-color: darkviolet;
-	background-image: url(images/apple.png);
+	background-image: url(images/scumbag-steve.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card9{
-	background-color: brown;
-	background-image: url(images/apple.png);
+	background-image: url(images/success-kid.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
 .card10{
-	background-color: black;
-	background-image: url(images/apple.png);
+	background-image: url(images/bad-luck-brian.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
 }
